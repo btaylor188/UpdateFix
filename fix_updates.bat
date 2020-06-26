@@ -13,5 +13,5 @@ echo "Removing Windows Agent"
 wmic product where name="Windows Agent" call uninstall /nointeractive 
 echo "Removing Windows Update Registry Keys"
 reg delete HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate /f
-echo "Updateing Group Policy"
+echo "Updating Group Policy"
 gpupdate /force
