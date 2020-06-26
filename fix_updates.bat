@@ -1,5 +1,4 @@
 @echo off
-
 #Remove Solar Winds Software
 echo "Removing Solarwinds Software"
 echo "Removing MSP Cache Service"
@@ -12,5 +11,7 @@ echo "Removing MSP Software Probe"
 wmic product where name="Windows Software Probe" call uninstall /nointeractive
 echo "Removing Windows Agent"
 wmic product where name="Windows Agent" call uninstall /nointeractive 
-echo "Removing Windows Update Registry Keys
+echo "Removing Windows Update Registry Keys"
 reg delete HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate /f
+echo "Updateing Group Policy"
+gpupdate /force
