@@ -21,7 +21,7 @@ if errorlevel 1 goto reboot
 if errorlevel 2 goto exit
 :reboot
 echo "Scheduling Reboot at 11:59 PM"
-rem schtasks /create /sc once /tn "Reboot" /tr "shutdown -r" /st 23:59
+schtasks /create /sc once /tn "Reboot" /tr "shutdown -r" /st 23:59
 
 :exit
 exit
