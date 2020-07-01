@@ -20,14 +20,3 @@ echo "Removing Windows Update Registry Keys"
 reg delete HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate /f
 echo "Updating Group Policy"
 gpupdate /force
-echo "Schedule Reboot?"
-choice 
-if errorlevel 2 goto exit
-if errorlevel 1 goto reboot
-
-:reboot
-echo "Scheduling Reboot at 11:59 PM"
-schtasks /create /sc once /tn "Reboot" /tr "shutdown -r" /st 23:59
-
-:exit
-exit
