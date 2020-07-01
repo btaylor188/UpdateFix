@@ -1,4 +1,9 @@
 @echo off
+rem ########################################################
+rem ##############  Current Version Available at ###########
+rem ####### https://github.com/btaylor188/UpdateFix ########
+rem ########################################################
+
 rem Remove Solar Winds Software
 echo "Removing Solarwinds Software"
 echo "Removing MSP Cache Service"
